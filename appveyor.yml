@@ -1,0 +1,24 @@
+version: "{build}"
+
+image: Visual Studio 2019
+
+clone_folder: c:\gopath\src\gobot.io\x\gobot
+
+environment:
+  PATH: C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;%PATH%
+  GOPATH: c:\gopath
+
+before_test:
+  - go version
+  - go env
+
+build_script:
+  - go test -v -cpu=2 .
+  - go test -v -cpu=2 ./drivers/aio/...
+  - go test -v -cpu=2 ./platforms/ble/...
+  - go test -v -cpu=2 ./platforms/dji/...
+  - go test -v -cpu=2 ./platforms/firmata/...
+  - go test -v -cpu=2 ./platforms/joystick/...
+  - go test -v -cpu=2 ./platforms/parrot/...
+  - go test -v -cpu=2 ./platforms/sphero/...
+  - cd ..
