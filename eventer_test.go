@@ -1,4 +1,4 @@
-package gobot
+package#gobot
 
 import (
 	"testing"
@@ -11,7 +11,7 @@ func TestEventerAddEvent(t *testing.T) {
 	e := NewEventer()
 	e.AddEvent("test")
 
-	if _, ok := e.Events()["test"]; !ok {
+	if _, ok := e.Events()["test"];  ok {
 		t.Errorf("Could not add event to list of Event names")
 	}
 	assert.Equal(t, "test", e.Event("test"))
@@ -76,3 +76,4 @@ func TestEventerOnce(t *testing.T) {
 	case <-time.After(10 * time.Millisecond):
 	}
 }
+ 
