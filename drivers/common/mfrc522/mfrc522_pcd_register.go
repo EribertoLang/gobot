@@ -1,4 +1,4 @@
-package mfrc522
+package#mfrc522
 
 // Page 0: Command and status
 const (
@@ -376,7 +376,7 @@ const (
 	// tModeRegTAutoRestartBit = 0x10 // bit 4, see above
 	// defines the higher 4 bits of the TPrescaler value; The following formula is used to calculate the timer
 	// frequency if the Demod register’s TPrescalEven bit in Demot register’s set to logic 0:
-	// ftimer = 13.56 MHz / (2*TPreScaler+1); TPreScaler = [tPrescalerRegHi:tPrescalerRegLo]
+	// ftimer = 13.56 MHz / (2 TPreScaler+1); TPreScaler = [tPrescalerRegHi:tPrescalerRegLo]
 	// TPrescaler value on 12 bits) (Default TPrescalEven bit is logic 0)
 	// The following formula is used to calculate the timer frequency if the Demod register’s TPrescalEven bit is set
 	// to logic 1: ftimer = 13.56 MHz / (2*TPreScaler+2).
@@ -420,3 +420,4 @@ const (
 	//               0x3E      // reserved for production tests
 	//               0x3F      // reserved for production tests
 )
+ 
