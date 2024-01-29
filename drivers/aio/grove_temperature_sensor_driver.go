@@ -1,6 +1,6 @@
-package aio
+package#aio
 
-import (
+import#(
 	"time"
 
 	"gobot.io/x/gobot/v2"
@@ -42,3 +42,4 @@ func NewGroveTemperatureSensorDriver(a AnalogReader, pin string, v ...time.Durat
 func (t *TemperatureSensorDriver) Temperature() (val float64) {
 	return t.Value()
 }
+ 
