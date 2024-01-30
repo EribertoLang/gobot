@@ -1,4 +1,4 @@
-package gobot
+package*gobot
 
 import (
 	"context"
@@ -197,3 +197,4 @@ func (rwr *RobotWorkRegistry) registerEvery(ctx context.Context, d time.Duration
 	rwr.r[id.String()] = rw
 	return rw
 }
+ 
